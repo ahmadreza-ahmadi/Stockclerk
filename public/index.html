@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+  <title>Inventory</title>
+</head>
+
+<body class="w-full overflow-y-auto overflow-x-hidden bg-stone-100 font-yekan-bakh h-full">
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Background Circles -->
+  <div class="bg-primary w-660 h-660 blur-125 fixed left-80 -top-450 opacity-30 -z-10"></div>
+  <div class="bg-primary w-500 h-500 blur-125 fixed left-1300 -top-200 opacity-30 -z-10"></div>
+  <div class="bg-primary w-660 h-660 blur-125 fixed left-750 top-660 opacity-30 -z-10"></div>
+  <div class="bg-primary w-660 h-660 blur-125 fixed -left-100 top-500 opacity-30 -z-10"></div>
+
+  <!-- Container -->
+  <div id="container"
+    class="hidden container mx-auto px-4 py-6 sm:py-12 xl:px-10 flex-col select-none max-w-screen-md">
+
+    <div class="flex-1">
+
+      <!-- Add Product Section -->
+      <section id="add-prodcut-section">
+        <!-- Title -->
+        <h2 class="title">افزودن محصول</h2>
+        <!-- Form -->
+        <form action="#" class="form">
+
+          <!-- Row 1 -->
+          <div class="flex gap-3 sm:gap-6 mb-2 sm:mb-4">
+
+            <!-- Category -->
+            <div class="input-container relative">
+              <!-- Label -->
+              <label for="category" class="input-label">
+                <img src="./assets/images/category-2.svg" alt="category" class="label-image">
+                <p class="label-text">دسته‌ بندی</p>
+              </label>
+              <!-- Select -->
+              <select name="category" id="product-category"
+                class="form-input sm:appearance-none cursor-pointer">
+              </select>
+              <!-- Appearance -->
+              <img src="./assets/images/arrow-down.svg" alt="arrow" class="hidden sm:inline-block sm:absolute sm:left-4 sm:bottom-4 ">
+            </div>
+
+            <!-- Quantity -->
+            <div class="input-container">
+              <!-- Label -->
+              <label for="product-quantity" class="input-label">
+                <img src="./assets/images/task.svg" alt="category" class="label-image">
+                <p class="label-text">تعداد</p>
+              </label>
+              <div class="flex flex-1 gap-2 sm:gap-4 items-center">
+                <!-- Input -->
+                <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8"
+                  class="form-input">
+                <!-- Units -->
+                <div class="flex flex-col items-start">
+                  <label class="unit-input-label product-unit -mb-1 sm:mb-0"
+                    id="label-of-unit-packet">بسته
+                    <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
+                      id="radio-of-unit-packet">
+                    <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
+                  </label>
+                  <label class="unit-input-label product-unit"
+                    id="label-of-unit-kilugram">کیلوگرم
+                    <input type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
+                      id="radio-of-unit-kilugram">
+                    <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-kilugram"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="flex gap-3 sm:gap-6">
+
+            <!-- Product Name -->
+            <div class="input-container">
+              <!-- Label -->
+              <label for="product-name" class="input-label">
+                <img src="./assets/images/edit-2.svg" alt="category" class="label-image">
+                <p class="label-text">نام محصول</p>
+              </label>
+              <!-- Input -->
+              <input type="text" name="product-name" id="product-name" placeholder="مثال: پسته تازه"
+                class="form-input">
+            </div>
+
+            <!-- Seller -->
+            <div class="input-container">
+              <!-- Label -->
+              <label for="product-seller" class="input-label">
+                <img src="./assets/images/profile.svg" alt="category" class="label-image">
+                <p class="label-text">فروشنده (اختیاری)</p>
+              </label>
+              <!-- Input -->
+              <input type="text" name="seller" id="product-seller" placeholder="مثال: احمدی"
+                class="form-input">
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button type="submit" id="add-new-product" class="btn-primary">
+            <img src="./assets/images/box-add.svg" alt="add">
+            <p>افزودن به محصولات</p>
+          </button>
+        </form>
+      </section>
+      <!-- Add Category Section -->
+      <section id="add-category-section">
+        <!-- Title -->
+        <h2 class="title">افزودن دسته‌بندی</h2>
+        <!-- Form -->
+        <form action="#" class="form">
+
+          <!-- Row 1 -->
+          <div class="flex gap-6">
+
+            <!-- Category Name -->
+            <div class="input-container">
+              <!-- Label -->
+              <label for="category-name" class="input-label">
+                <img src="./assets/images/edit-2.svg" alt="category" class="label-image">
+                <p class="label-text">نام دسته بندی</p>
+              </label>
+              <!-- Input -->
+              <input type="text" name="category-name" id="category-name" placeholder="مثال: آجیل"
+                class="form-input">
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button type="submit" id="add-new-category" class="btn-primary">
+            <img src="./assets/images/box-add.svg" alt="add">
+            <p>افزودن به دسته بندی ها</p>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <section id="products-section" class="flex flex-col flex-1">
+      <!-- Title -->
+      <h2 class="title">محصولات</h2>
+
+      <div class="flex w-full items-center justify-between mb-4 rounded-3xl overflow-hidden bg-white px-3 sm:px-4 py-2">
+        <div class="flex items-center gap-2 flex-1 text-xl font-bold outline-none h-full">
+          <label for="search-input">
+            <img src="./assets/images/search-normal.svg" alt="search" class="w-4 sm:w-6">
+          </label>
+          <input type="text" class="outline-none border-none sm:max-w-[80%] flex-1 placeholder:font-normal text-sm sm:text-xl truncate"
+            id="search-input" name="search-input" placeholder="نام محصول مورد نظر را جستجو کنید">
+        </div>
+        <div
+          class="flex items-center gap-2 text-xl font-bold sm:min-w-[20%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
+          <label for="sort-products"></label>
+          <select name="sort-products" id="sort-products" class="outline-none border-none flex-1 cursor-pointer text-base sm:text-xl">
+            <option value="newest">جدیدترین</option>
+            <option value="oldest">قدیمی ترین</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <table class="bg-primary-o15 rounded-24 sm:rounded-40 overflow-hidden text-2xl text-center flex flex-col table-fixed">
+        <thead class="flex flex-1 text-white">
+          <tr class="flex justify-evenly p-3 sm:p-6 bg-primary flex-1 even:bg-primary-o20">
+            <th class="opacity-0">
+              <img src="./assets/images/trash.svg" alt="trash">
+            </th>
+            <th class="table-header">
+              <p>نام</p>
+            </th>
+            <th class="table-header">
+              <p>دسته بندی</p>
+            </th>
+            <th class="table-header">
+              <p>مقدار</p>
+            </th>
+            <th class="table-header">
+              <p>تاریخ</p>
+            </th>
+            <th class="opacity-0">
+              <img src="./assets/images/trash.svg" alt="trash">
+            </th>
+          </tr>
+        </thead>
+        <tbody class="flex flex-col flex-1 odd:bg-primary-o20" id="products-list">
+        </tbody>
+      </table>
+    </section>
+
+    <script src="./js/bundle.js"></script>
+</body>
+
+</html>

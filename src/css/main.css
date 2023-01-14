@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "advanced.css";
+
+@layer components {
+  .title {
+    @apply font-bold text-3xl sm:text-5xl text-center drop-shadow-title -mb-4;
+  }
+
+  .form {
+    @apply bg-primary-o15 rounded-24 sm:rounded-40 p-4 sm:p-6 pt-6 sm:pt-8 mb-6 sm:mb-10;
+  }
+
+  .btn-primary {
+    @apply flex justify-center items-center overflow-hidden transition-all gap-2 sm:gap-3 hover:gap-1 text-lg sm:text-2xl py-2 sm:py-4 bg-primary rounded-2xl sm:rounded-24 w-full text-white font-bold mt-4 sm:mt-8;
+  }
+
+  .btn-primary img {
+    @apply w-5 h-5 sm:w-6 sm:h-6;
+  }
+
+  .input-label {
+    @apply flex items-center gap-2 mr-2 sm:mr-4 -mb-3 z-10;
+  }
+
+  .unit-input-label {
+    @apply flex flex-row-reverse gap-2 items-center text-base sm:text-2xl relative cursor-pointer;
+  }
+
+  .form-input {
+    @apply rounded-xl sm:rounded-2xl placeholder:font-normal w-full px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-2xl font-bold bg-white border-none outline-none truncate;
+  }
+
+  .input-container {
+    @apply flex flex-col flex-1;
+  }
+
+  .label-text {
+    @apply text-[#555555] text-lg sm:text-2xl truncate;
+  }
+
+  .label-image {
+    @apply w-4 h-4 sm:w-6 sm:h-6;
+  }
+
+  .table-header {
+    @apply flex-1 text-base sm:text-2xl truncate;
+  }
+
+  .table-body {
+    @apply flex-1 text-base sm:text-2xl truncate;
+  }
+}

@@ -21,7 +21,7 @@
   }
 
   .input-label {
-    @apply flex items-center gap-2 mr-2 sm:mr-4 -mb-3 z-10;
+    @apply flex items-center gap-1 sm:gap-2 mr-2 sm:mr-4 -mb-3 z-10;
   }
 
   .unit-input-label {

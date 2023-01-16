@@ -29,7 +29,7 @@
   }
 
   .form-input {
-    @apply rounded-xl sm:rounded-2xl placeholder:font-normal w-full px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-2xl font-bold bg-white border-none outline-none truncate;
+    @apply rounded-xl sm:rounded-2xl placeholder:font-normal w-full px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-2xl font-bold bg-white border-none invalid:border invalid:border-primary outline-none truncate;
   }
 
   .input-container {

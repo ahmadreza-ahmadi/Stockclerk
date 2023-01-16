@@ -13,8 +13,8 @@
 <body class="w-full overflow-y-auto overflow-x-hidden bg-stone-100 font-yekan-bakh h-full">
 
   <!-- Loading -->
-  <div id="loading">
-    <div class="loader"></div>
+  <div id="loading" class="absolute w-full h-full bg-white z-50">
+    <div id="loader"></div>
   </div>
 
   <!-- Background Circles -->
@@ -67,13 +67,13 @@
                   class="form-input">
                 <!-- Units -->
                 <div class="flex flex-col items-start">
-                  <label class="unit-input-label product-unit -mb-1 sm:mb-0"
+                  <label class="unit-input-label -mb-1 sm:mb-0"
                     id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
                     <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
                   </label>
-                  <label class="unit-input-label product-unit"
+                  <label class="unit-input-label"
                     id="label-of-unit-kilugram">کیلوگرم
                     <input type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-kilugram">

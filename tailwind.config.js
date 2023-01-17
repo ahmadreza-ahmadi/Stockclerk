@@ -2,17 +2,17 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
-    colors: {
-      'primary': '#4790E7',
-      'primary-o50': 'rgba(71, 144, 231, 0.5)',
-      'primary-o20': 'rgba(71, 144, 231, 0.2)',
-      'primary-o15': 'rgba(71, 144, 231, 0.15)',
-      'white': '#FFFFFF'
-    },
     fontFamily: {
       'yekan-bakh': 'yekan bakh',
     },
     extend: {
+      colors: {
+        'primary': '#4790E7',
+        'primary-o50': 'rgba(71, 144, 231, 0.5)',
+        'primary-o20': 'rgba(71, 144, 231, 0.2)',
+        'primary-o15': 'rgba(71, 144, 231, 0.15)',
+        'white': '#FFFFFF'
+      },  
       spacing: {
         '1300': '1300px',
         '750': '750px',

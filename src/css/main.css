@@ -5,35 +5,31 @@
 
 @layer components {
   .title {
-    @apply font-bold text-3xl sm:text-5xl text-center drop-shadow-title -mb-4;
+    @apply font-bold text-3xl lg:text-5xl text-center drop-shadow-title -mb-4;
   }
 
   .form {
-    @apply bg-primary-o15 rounded-24 sm:rounded-40 p-4 sm:p-6 pt-6 sm:pt-8 mb-4 sm:mb-8;
+    @apply bg-primary-o15 rounded-24 lg:rounded-40 p-4 lg:p-6 pt-6 lg:pt-8 mb-4 lg:mb-6;
   }
 
   .btn-primary {
-    @apply flex justify-center items-center overflow-hidden transition-all gap-2 sm:gap-3 hover:gap-1 text-lg sm:text-2xl py-2 sm:py-4 bg-primary rounded-2xl sm:rounded-24 w-full text-white font-bold mt-4 sm:mt-6;
-  }
-
-  .btn-secondary {
-    @apply flex justify-center items-center text-lg sm:text-2xl border-2 border-primary text-primary mt-4 sm:mt-6 py-2 sm:py-4 px-4 sm:px-8 rounded-2xl sm:rounded-24;
+    @apply flex justify-center items-center overflow-hidden transition-all gap-2 lg:gap-3 hover:gap-1 text-lg lg:text-2xl py-2 lg:py-4 bg-primary rounded-xl lg:rounded-2xl w-full text-white font-bold mt-4 lg:mt-6;
   }
 
   .btn-primary img {
-    @apply w-5 h-5 sm:w-6 sm:h-6;
+    @apply w-5 h-5 lg:w-6 lg:h-6;
   }
 
   .input-label {
-    @apply flex items-center gap-1 sm:gap-2 mr-2 sm:mr-4 -mb-3 z-10;
+    @apply flex items-center gap-1 lg:gap-2 mr-2 lg:mr-4 -mb-3 z-10;
   }
 
   .unit-input-label {
-    @apply flex flex-row-reverse gap-2 items-center text-base sm:text-2xl relative cursor-pointer;
+    @apply flex flex-row-reverse gap-2 items-center text-base lg:text-2xl relative cursor-pointer;
   }
 
   .form-input {
-    @apply rounded-xl sm:rounded-2xl placeholder:font-normal w-full px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-2xl font-bold bg-white border-none invalid:border invalid:border-primary outline-none truncate;
+    @apply rounded-xl lg:rounded-2xl placeholder:font-normal w-full px-4 lg:px-6 py-2 lg:py-4 text-lg lg:text-2xl font-bold bg-white border-none invalid:border invalid:border-primary outline-none truncate;
   }
 
   .input-container {
@@ -41,18 +37,18 @@
   }
 
   .label-text {
-    @apply text-[#555555] text-lg sm:text-2xl truncate;
+    @apply text-[#555555] text-lg lg:text-2xl truncate;
   }
 
   .label-image {
-    @apply w-4 h-4 sm:w-6 sm:h-6;
+    @apply w-4 h-4 lg:w-6 lg:h-6;
   }
 
   .table-header {
-    @apply flex-1 text-base sm:text-2xl truncate;
+    @apply flex-1 text-base lg:text-2xl truncate;
   }
 
   .table-body {
-    @apply flex-1 text-base sm:text-2xl truncate;
+    @apply flex-1 text-base lg:text-2xl truncate;
   }
 }

@@ -26,7 +26,7 @@
 
   <!-- Container -->
   <div id="container"
-    class="hidden container overflow-y-auto mx-auto px-4 py-4 sm:py-8 xl:px-10 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
+    class="hidden container overflow-y-auto mx-auto px-4 py-4 lg:py-8 xl:px-10 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
     <div class="flex flex-col lg:flex-1">
       
@@ -45,7 +45,7 @@
         <form action="#" class="form">
 
           <!-- Row 1 -->
-          <div class="flex gap-3 sm:gap-6 mb-2 sm:mb-4">
+          <div class="flex gap-3 lg:gap-6 mb-2 lg:mb-4">
 
             <!-- Category -->
             <div class="input-container relative">
@@ -59,7 +59,7 @@
               </select>
               <!-- Appearance -->
               <img src="./assets/images/arrow-down.svg" alt="arrow"
-                class="absolute w-5 sm:w-8 left-3 sm:left-4 bottom-3 sm:bottom-4">
+                class="absolute w-5 lg:w-8 left-3 lg:left-4 bottom-3 lg:bottom-4">
             </div>
 
             <!-- Quantity -->
@@ -69,20 +69,20 @@
                 <img src="./assets/images/task.svg" alt="category" class="label-image">
                 <p class="label-text">تعداد</p>
               </label>
-              <div class="flex flex-1 gap-2 sm:gap-4 items-center">
+              <div class="flex flex-1 gap-2 lg:gap-4 items-center">
                 <!-- Input -->
                 <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8" class="form-input">
                 <!-- Units -->
                 <div class="flex flex-col items-start">
-                  <label class="unit-input-label -mb-1 sm:mb-0" id="label-of-unit-packet">بسته
+                  <label class="unit-input-label -mb-1 lg:mb-0" id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
-                    <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
+                    <span class="h-3 lg:h-4 w-3 lg:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
                   </label>
                   <label class="unit-input-label" id="label-of-unit-kilugram">کیلوگرم
                     <input type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-kilugram">
-                    <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-kilugram"></span>
+                    <span class="h-3 lg:h-4 w-3 lg:w-4 bg-white rounded-[50%] relative" id="checkmark-kilugram"></span>
                   </label>
                 </div>
               </div>
@@ -90,7 +90,7 @@
           </div>
 
           <!-- Row 2 -->
-          <div class="flex gap-3 sm:gap-6">
+          <div class="flex gap-3 lg:gap-6">
 
             <!-- Product Name -->
             <div class="input-container">
@@ -148,13 +148,13 @@
             </div>
 
             <!-- Buttons -->
-            <div class="flex gap-3 sm:gap-4 w-full">
+            <div class="flex items-center gap-3 lg:gap-4 w-full">
               <button type="submit" id="add-new-category" class="btn-primary">
                 <img src="./assets/images/box-add.svg" alt="add">
                 <p>افزودن به دسته بندی ها</p>
               </button>
-              <button type="submit" id="cancel-add-new-category" class="btn-secondary">
-                لغو
+              <button type="reset" id="cancel-add-new-category" class="flex justify-center items-center w-7 lg:w-12 h-7 lg:h-9 mt-12 lg:mt-6 p-1 lg:p-2 rounded-xl lg:rounded-2xl transition-all hover:scale-110">
+                <img src="./assets/images/close.svg" alt="Cancel">
               </button>
             </div>
           </form>
@@ -166,20 +166,20 @@
       <!-- Title -->
       <h2 class="title">محصولات</h2>
 
-      <div class="flex w-full items-center justify-between mb-4 rounded-3xl overflow-hidden bg-white px-3 sm:px-4 py-2">
+      <div class="flex w-full items-center justify-between mb-4 rounded-3xl overflow-hidden bg-white px-3 lg:px-4 py-2">
         <div class="flex items-center gap-2 flex-1 text-xl font-bold outline-none h-full">
           <label for="search-input">
-            <img src="./assets/images/search-normal.svg" alt="search" class="w-4 sm:w-6">
+            <img src="./assets/images/search-normal.svg" alt="search" class="w-4 lg:w-6">
           </label>
           <input type="text"
-            class="outline-none border-none sm:max-w-[80%] flex-1 placeholder:font-normal text-sm sm:text-xl truncate"
+            class="outline-none border-none lg:max-w-[80%] flex-1 placeholder:font-normal text-sm lg:text-xl truncate"
             id="search-input" name="search-input" placeholder="نام محصول مورد نظر را جستجو کنید">
         </div>
         <div
-          class="flex items-center gap-2 text-xl font-bold sm:min-w-[20%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
+          class="flex items-center gap-2 text-xl font-bold lg:min-w-[20%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
           <label for="sort-products"></label>
           <select name="sort-products" id="sort-products"
-            class="bg-white outline-none border-none flex-1 cursor-pointer text-base sm:text-xl">
+            class="bg-white outline-none border-none flex-1 cursor-pointer text-base lg:text-xl">
             <option value="newest">جدیدترین</option>
             <option value="oldest">قدیمی ترین</option>
           </select>
@@ -188,9 +188,9 @@
 
       <!-- Table -->
       <table
-        class="bg-primary-o15 rounded-24 overflow-hidden sm:rounded-40 text-2xl text-center flex flex-col table-fixed">
+        class="bg-primary-o15 rounded-24 overflow-hidden lg:rounded-40 text-2xl text-center flex flex-col table-fixed">
         <thead class="flex text-white">
-          <tr class="flex justify-evenly p-3 sm:p-6 bg-primary flex-1 even:bg-primary-o20">
+          <tr class="flex justify-evenly p-3 lg:p-6 bg-primary flex-1 even:bg-primary-o20">
             <th class="opacity-0">
               <img src="./assets/images/trash.svg" alt="trash">
             </th>

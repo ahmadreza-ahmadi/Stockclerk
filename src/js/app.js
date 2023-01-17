@@ -2,15 +2,15 @@ import CategoryView from "/src/js/categoryView.js";
 import ProductView from "/src/js/productView.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // fix height in mobile screen
+  let vh = window.innerHeight * 0.01;
+  document.querySelector("#container").style.setProperty('--vh', `${vh}px`);
+
   CategoryView.setApp();
   ProductView.setApp();
   CategoryView.createCategoriesList();
   ProductView.createProductsList(ProductView.products);
-});
 
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.querySelector("#container").style.setProperty('--vh', `${vh}px`);
 });
 
 window.onload = function () {

@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ProductView.createProductsList(ProductView.products);
 });
 
-// fix height in mobile screen
-let vh = window.innerHeight * 0.01;
-document.querySelector("#container").style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.querySelector("#container").style.setProperty('--vh', `${vh}px`);
+});
 
 window.onload = function () {
   const loader = document.querySelector("#loading");

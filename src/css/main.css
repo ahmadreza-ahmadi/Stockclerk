@@ -16,6 +16,10 @@
     @apply flex justify-center items-center overflow-hidden transition-all gap-2 sm:gap-3 hover:gap-1 text-lg sm:text-2xl py-2 sm:py-4 bg-primary rounded-2xl sm:rounded-24 w-full text-white font-bold mt-4 sm:mt-6;
   }
 
+  .btn-secondary {
+    @apply flex justify-center items-center text-lg sm:text-2xl border-2 border-primary text-primary mt-4 sm:mt-6 py-2 sm:py-4 px-4 sm:px-8 rounded-2xl sm:rounded-24;
+  }
+
   .btn-primary img {
     @apply w-5 h-5 sm:w-6 sm:h-6;
   }

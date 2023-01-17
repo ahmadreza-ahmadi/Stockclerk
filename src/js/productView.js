@@ -53,6 +53,8 @@ class ProductView {
     productTitle.value = "";
     productQuantity.value = "";
     productSeller.value = "";
+
+    this.showSnackbar();
   }
 
   createProductsList(products) {
@@ -113,6 +115,17 @@ class ProductView {
     Storage.deleteProduct(productId);
     this.products = Storage.getAllProducts();
     this.createProductsList(this.products);
+  }
+
+  showSnackbar() {
+    const snackbar = document.querySelector("#product-snackbar");
+    snackbar.classList.add("show");
+    setTimeout(() => {
+      snackbar.classList.remove("show");
+    }, 3000);
+    document.querySelector("#close-product-snackbar").addEventListener("click", () => {
+      snackbar.classList.remove("show");
+    });
   }
 }
 

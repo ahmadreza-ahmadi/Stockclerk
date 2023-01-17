@@ -36,9 +36,9 @@ module.exports = {
         '40': '40px',
         '24': '24px',
       },
-      content: {
-        'arrow': 'url("/assets/images/arrow-down.svg")',
-      },
+      boxShadow: {
+        'snackbar-progress': '0 0 5px 0 rgb(74 222 128)',
+      }
     },
   },
   plugins: [],

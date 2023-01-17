@@ -13,7 +13,7 @@
   }
 
   .btn-primary {
-    @apply flex justify-center items-center overflow-hidden transition-all gap-2 lg:gap-3 hover:gap-1 text-lg lg:text-2xl py-2 lg:py-4 bg-primary rounded-xl lg:rounded-2xl w-full text-white font-bold mt-4 lg:mt-6;
+    @apply flex justify-center items-center overflow-hidden transition-all gap-2 lg:gap-3 hover:gap-1 text-lg lg:text-2xl py-2 lg:py-4 bg-primary rounded-xl lg:rounded-2xl w-full text-white font-bold ;
   }
 
   .btn-primary img {

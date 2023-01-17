@@ -78,6 +78,11 @@ input[type=number] {
   background: white;
 }
 
+
+.snackbar.show {
+  bottom: 24px;
+}
+
 @media (min-width: 640px) {
 
   #checkmark-packet:after,

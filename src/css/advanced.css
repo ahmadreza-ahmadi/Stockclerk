@@ -1,3 +1,12 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
 #loader {
   width: 48px;
   height: 48px;
@@ -75,9 +84,31 @@ input[type=number] {
 }
 
 @media (min-width: 640px) {
+
   #checkmark-packet:after,
   #checkmark-kilugram:after {
     width: 8px;
-    height: 8px;  
+    height: 8px;
   }
-  }
+}
+
+tbody::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  z-index: 1000;
+}
+
+tbody::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f7f4ed;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background: #2196F3;
+  border-radius: 100vh;
+  border: 3px solid #f6f7ed;
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+  background: rgb(33, 150, 243, 0.8);
+}

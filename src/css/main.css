@@ -9,11 +9,11 @@
   }
 
   .form {
-    @apply bg-primary-o15 rounded-24 sm:rounded-40 p-4 sm:p-6 pt-6 sm:pt-8 mb-6 sm:mb-10;
+    @apply bg-primary-o15 rounded-24 sm:rounded-40 p-4 sm:p-6 pt-6 sm:pt-8 mb-4 sm:mb-8;
   }
 
   .btn-primary {
-    @apply flex justify-center items-center overflow-hidden transition-all gap-2 sm:gap-3 hover:gap-1 text-lg sm:text-2xl py-2 sm:py-4 bg-primary rounded-2xl sm:rounded-24 w-full text-white font-bold mt-4 sm:mt-8;
+    @apply flex justify-center items-center overflow-hidden transition-all gap-2 sm:gap-3 hover:gap-1 text-lg sm:text-2xl py-2 sm:py-4 bg-primary rounded-2xl sm:rounded-24 w-full text-white font-bold mt-4 sm:mt-6;
   }
 
   .btn-primary img {

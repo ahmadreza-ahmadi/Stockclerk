@@ -25,9 +25,9 @@
 
   <!-- Container -->
   <div id="container"
-    class="hidden container mx-auto px-4 py-6 sm:py-12 xl:px-10 flex-col select-none md:max-w-screen-md">
+    class="hidden container h-screen overflow-y-auto mx-auto px-4 py-4 sm:py-8 xl:px-10 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
-    <div class="flex-1">
+    <div class="flex flex-col lg:flex-1">
 
       <!-- Add Product Section -->
       <section id="add-prodcut-section">
@@ -47,11 +47,11 @@
                 <p class="label-text">دسته‌ بندی</p>
               </label>
               <!-- Select -->
-              <select name="category" id="product-category"
-                class="form-input appearance-none cursor-pointer">
+              <select name="category" id="product-category" class="form-input appearance-none cursor-pointer">
               </select>
               <!-- Appearance -->
-              <img src="./assets/images/arrow-down.svg" alt="arrow" class="absolute w-5 sm:w-8 left-3 sm:left-4 bottom-3 sm:bottom-4">
+              <img src="./assets/images/arrow-down.svg" alt="arrow"
+                class="absolute w-5 sm:w-8 left-3 sm:left-4 bottom-3 sm:bottom-4">
             </div>
 
             <!-- Quantity -->
@@ -63,18 +63,15 @@
               </label>
               <div class="flex flex-1 gap-2 sm:gap-4 items-center">
                 <!-- Input -->
-                <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8"
-                  class="form-input">
+                <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8" class="form-input">
                 <!-- Units -->
                 <div class="flex flex-col items-start">
-                  <label class="unit-input-label -mb-1 sm:mb-0"
-                    id="label-of-unit-packet">بسته
+                  <label class="unit-input-label -mb-1 sm:mb-0" id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
                     <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
                   </label>
-                  <label class="unit-input-label"
-                    id="label-of-unit-kilugram">کیلوگرم
+                  <label class="unit-input-label" id="label-of-unit-kilugram">کیلوگرم
                     <input type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-kilugram">
                     <span class="h-3 sm:h-4 w-3 sm:w-4 bg-white rounded-[50%] relative" id="checkmark-kilugram"></span>
@@ -95,8 +92,7 @@
                 <p class="label-text">نام محصول</p>
               </label>
               <!-- Input -->
-              <input type="text" name="product-name" id="product-name" placeholder="مثال: پسته تازه"
-                class="form-input">
+              <input type="text" name="product-name" id="product-name" placeholder="مثال: پسته تازه" class="form-input">
             </div>
 
             <!-- Seller -->
@@ -107,8 +103,7 @@
                 <p class="label-text">فروشنده (اختیاری)</p>
               </label>
               <!-- Input -->
-              <input type="text" name="seller" id="product-seller" placeholder="مثال: احمدی"
-                class="form-input">
+              <input type="text" name="seller" id="product-seller" placeholder="مثال: احمدی" class="form-input">
             </div>
           </div>
 
@@ -119,39 +114,47 @@
           </button>
         </form>
       </section>
+
       <!-- Add Category Section -->
-      <section id="add-category-section">
-        <!-- Title -->
-        <h2 class="title">افزودن دسته‌بندی</h2>
-        <!-- Form -->
-        <form action="#" class="form">
+      <section class="w-full flex flex-col">
+        <div id="add-category-section"
+          class="opacity-0 h-0 lg:opacity-100 lg:h-auto overflow-hidden transition-all lg:inline-block">
+          <!-- Title -->
+          <h2 class="title">افزودن دسته‌بندی</h2>
+          <!-- Form -->
+          <form action="#" class="form">
 
-          <!-- Row 1 -->
-          <div class="flex gap-6">
+            <!-- Row 1 -->
+            <div class="flex gap-6">
 
-            <!-- Category Name -->
-            <div class="input-container">
-              <!-- Label -->
-              <label for="category-name" class="input-label">
-                <img src="./assets/images/edit-2.svg" alt="category" class="label-image">
-                <p class="label-text">نام دسته بندی</p>
-              </label>
-              <!-- Input -->
-              <input type="text" name="category-name" id="category-name" placeholder="مثال: آجیل"
-                class="form-input">
+              <!-- Category Name -->
+              <div class="input-container">
+                <!-- Label -->
+                <label for="category-name" class="input-label">
+                  <img src="./assets/images/edit-2.svg" alt="category" class="label-image">
+                  <p class="label-text">نام دسته بندی</p>
+                </label>
+                <!-- Input -->
+                <input type="text" name="category-name" id="category-name" placeholder="مثال: آجیل" class="form-input">
+              </div>
             </div>
-          </div>
 
-          <!-- Button -->
-          <button type="submit" id="add-new-category" class="btn-primary">
-            <img src="./assets/images/box-add.svg" alt="add">
-            <p>افزودن به دسته بندی ها</p>
-          </button>
-        </form>
+            <!-- Button -->
+            <button type="submit" id="add-new-category" class="btn-primary">
+              <img src="./assets/images/box-add.svg" alt="add">
+              <p>افزودن به دسته بندی ها</p>
+            </button>
+          </form>
+        </div>
+        <button id="toggle-add-category"
+          class="lg:hidden w-fit mx-auto rounded-lg mb-4 py-2 px-4 bg-primary text-white font-bold text-center text-sm">افزودن
+          دسته
+          بندی
+          جدید</button>
       </section>
     </div>
 
-    <section id="products-section" class="flex flex-col flex-1">
+    <section id="products-section" class="flex flex-col flex-1 h-full overflow-hidden">
       <!-- Title -->
       <h2 class="title">محصولات</h2>
 
@@ -160,13 +163,15 @@
           <label for="search-input">
             <img src="./assets/images/search-normal.svg" alt="search" class="w-4 sm:w-6">
           </label>
-          <input type="text" class="outline-none border-none sm:max-w-[80%] flex-1 placeholder:font-normal text-sm sm:text-xl truncate"
+          <input type="text"
+            class="outline-none border-none sm:max-w-[80%] flex-1 placeholder:font-normal text-sm sm:text-xl truncate"
             id="search-input" name="search-input" placeholder="نام محصول مورد نظر را جستجو کنید">
         </div>
         <div
           class="flex items-center gap-2 text-xl font-bold sm:min-w-[20%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
           <label for="sort-products"></label>
-          <select name="sort-products" id="sort-products" class="bg-white outline-none border-none flex-1 cursor-pointer text-base sm:text-xl">
+          <select name="sort-products" id="sort-products"
+            class="bg-white outline-none border-none flex-1 cursor-pointer text-base sm:text-xl">
             <option value="newest">جدیدترین</option>
             <option value="oldest">قدیمی ترین</option>
           </select>
@@ -174,8 +179,9 @@
       </div>
 
       <!-- Table -->
-      <table class="bg-primary-o15 rounded-24 sm:rounded-40 overflow-hidden text-2xl text-center flex flex-col table-fixed">
-        <thead class="flex flex-1 text-white">
+      <table
+        class="bg-primary-o15 rounded-24 overflow-hidden sm:rounded-40 text-2xl text-center flex flex-col table-fixed">
+        <thead class="flex text-white">
           <tr class="flex justify-evenly p-3 sm:p-6 bg-primary flex-1 even:bg-primary-o20">
             <th class="opacity-0">
               <img src="./assets/images/trash.svg" alt="trash">
@@ -197,7 +203,7 @@
             </th>
           </tr>
         </thead>
-        <tbody class="flex flex-col flex-1 odd:bg-primary-o20" id="products-list">
+        <tbody class="flex flex-col odd:bg-primary-o20 overflow-auto" id="products-list">
         </tbody>
       </table>
     </section>

@@ -4,11 +4,14 @@ import Storage from "/src/js/storage.js";
 // variables
 const categoryTitle = document.querySelector("#category-name");
 const addNewCategoryBtn = document.querySelector("#add-new-category");
+const toggleAddCategoryBtn = document.querySelector("#toggle-add-category");
+const addCategorySection = document.querySelector("#add-category-section");
 
 // class
 class CategoryView {
   constructor() {
     addNewCategoryBtn.addEventListener("click", (event) => this.addNewCategory(event));
+    toggleAddCategoryBtn.addEventListener("click", (event => this.toggleAddCategory(event)));
     this.categories = [];
   }
 
@@ -35,6 +38,10 @@ class CategoryView {
 
     // empty input after add category
     categoryTitle.value = "";
+
+    // close cateogry section
+    addCategorySection.classList.add("hidden");
+    toggleAddCategoryBtn.classList.remove("hidden");
   }
 
   setApp() {
@@ -56,6 +63,12 @@ class CategoryView {
     // show options on DOM
     const categoriesOptions = document.querySelector("#product-category");
     categoriesOptions.innerHTML = result;
+  }
+
+  toggleAddCategory(event) {
+    addCategorySection.classList.remove("opacity-0");
+    addCategorySection.classList.remove("h-0");
+    toggleAddCategoryBtn.classList.add("hidden");
   }
 }
 

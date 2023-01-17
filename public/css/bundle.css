@@ -782,8 +782,8 @@ video {
 .-mb-1 {
   margin-bottom: -0.25rem;
 }
-.mt-12 {
-  margin-top: 3rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 .flex {
   display: flex;
@@ -913,9 +913,6 @@ video {
 }
 .rounded-\[50\%\] {
   border-radius: 50%;
-}
-.rounded-xl {
-  border-radius: 0.75rem;
 }
 .rounded-3xl {
   border-radius: 1.5rem;
@@ -1245,10 +1242,6 @@ tbody::-webkit-scrollbar-thumb:hover {
 
   .lg\:gap-4 {
     gap: 1rem;
-  }
-
-  .lg\:rounded-2xl {
-    border-radius: 1rem;
   }
 
   .lg\:rounded-40 {

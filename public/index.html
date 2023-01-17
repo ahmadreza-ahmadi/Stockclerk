@@ -26,13 +26,13 @@
 
   <!-- Container -->
   <div id="container"
-    class="hidden container overflow-y-auto mx-auto px-4 py-4 lg:py-8 xl:px-10 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
+    class="hidden container overflow-y-auto mx-auto px-4 py-4 lg:py-8 xl:px-10 pt-[52px] transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
     <div class="flex flex-col lg:flex-1">
       
       <!-- Add New Category Button -->
       <button id="toggle-add-category"
-      class="lg:hidden w-full mx-auto rounded-lg mb-4 py-2 px-4 bg-primary text-white font-bold text-center text-sm">افزودن
+      class="absolute top-0 left-0 z-30 transition-all duration-300 lg:hidden w-full mx-auto mb-4 py-2 px-4 bg-primary text-white font-bold text-center text-sm">افزودن
       دسته
       بندی
       جدید</button>
@@ -124,9 +124,8 @@
       </section>
 
       <!-- Add Category Section -->
-      <section class="w-full flex flex-col">
-        <div id="add-category-section"
-          class="opacity-0 h-0 lg:opacity-100 lg:h-auto overflow-hidden transition-all lg:inline-block">
+        <section id="add-category-section"
+          class="opacity-0 h-0 lg:opacity-100 lg:h-auto overflow-hidden transition-all duration-300 lg:inline-block">
           <!-- Title -->
           <h2 class="title">افزودن دسته‌بندی</h2>
           <!-- Form -->
@@ -153,13 +152,12 @@
                 <img src="./assets/images/box-add.svg" alt="add">
                 <p>افزودن به دسته بندی ها</p>
               </button>
-              <button type="reset" id="cancel-add-new-category" class="flex h-full justify-center items-center mt-4 lg:mt-6 p-1 lg:p-2 transition-all hover:scale-110">
+              <button type="reset" id="cancel-add-new-category" class="flex h-full justify-center items-center mt-4 lg:p-0 transition-all hover:scale-110">
                 <img src="./assets/images/close.svg" alt="Cancel" class="w-7 lg:w-12 h-7 lg:h-9">
               </button>
             </div>
           </form>
-        </div>
-      </section>
+        </section>
     </div>
 
     <section id="products-section" class="flex flex-col flex-1 h-full overflow-hidden">

@@ -2,6 +2,7 @@
 import Storage from "/src/js/storage.js";
 
 // variables
+const container = document.querySelector("#container");
 const categoryTitle = document.querySelector("#category-name");
 const addNewCategoryBtn = document.querySelector("#add-new-category");
 const cancelAddNewCategoryBtn = document.querySelector("#cancel-add-new-category");
@@ -12,7 +13,7 @@ const addCategorySection = document.querySelector("#add-category-section");
 class CategoryView {
   constructor() {
     addNewCategoryBtn.addEventListener("click", (event) => this.addNewCategory(event));
-    cancelAddNewCategoryBtn.addEventListener("click", (event) => this.cancelAddNewCategory(event));
+    cancelAddNewCategoryBtn.addEventListener("click", (event) => this.closeAddCategorySection(event));
     toggleAddCategoryBtn.addEventListener("click", (event => this.toggleAddCategory(event)));
     this.categories = [];
   }
@@ -42,8 +43,7 @@ class CategoryView {
     categoryTitle.value = "";
 
     // close cateogry section
-    addCategorySection.classList.add("hidden");
-    toggleAddCategoryBtn.classList.remove("hidden");
+    this.closeAddCategorySection(event);
   }
 
   setApp() {
@@ -70,16 +70,18 @@ class CategoryView {
   toggleAddCategory(event) {
     event.preventDefault();
     addCategorySection.classList.remove("opacity-0");
-    addCategorySection.classList.remove("h-0");
-    toggleAddCategoryBtn.classList.add("hidden");
+    addCategorySection.style.height = "196px";
+    toggleAddCategoryBtn.classList.add("-translate-y-full");
+    container.classList.remove("pt-[52px]");
   }
 
-  cancelAddNewCategory(event) {
+  closeAddCategorySection(event) {
     event.preventDefault();
     categoryTitle.value = "";
     addCategorySection.classList.add("opacity-0");
-    addCategorySection.classList.add("h-0");
-    toggleAddCategoryBtn.classList.remove("hidden");
+    addCategorySection.style.height = "0";
+    toggleAddCategoryBtn.classList.remove("-translate-y-full");
+    container.classList.add("pt-[52px]");
   }
 }
 

@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   ProductView.setApp();
   CategoryView.createCategoriesList();
   ProductView.createProductsList(ProductView.products);
-  const loader = document.querySelector("#loading");
-  loader.style.display = "none";
-  const container = document.querySelector("#container");
-  container.style.display = "flex";
 });
 
 
@@ -19,4 +15,8 @@ window.addEventListener('resize', () => {
 });
 
 window.onload = function () {
+  const loader = document.querySelector("#loading");
+  loader.style.display = "none";
+  const container = document.querySelector("#container");
+  container.style.display = "flex";
 };

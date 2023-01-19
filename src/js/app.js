@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   ProductView.setApp();
   CategoryView.createCategoriesList();
   ProductView.createProductsList(ProductView.products);
+  const loader = document.querySelector("#loading");
+  loader.style.display = "none";
+  const container = document.querySelector("#container");
+  container.style.display = "flex";
 });
 
 
 window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.querySelector("#container").style.setProperty('--vh', `${vh}px`);
-})
+});
 
 window.onload = function () {
-  const loader = document.querySelector("#loading");
-  loader.style.display = "none";
-  const container = document.querySelector("#container");
-  container.style.display = "flex";
 };

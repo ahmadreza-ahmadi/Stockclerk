@@ -27,32 +27,18 @@
 
   <!-- Container -->
   <div id="container"
-    class="hidden container overflow-hidden mx-auto px-4 py-4 lg:py-8 xl:px-10 pt-[52px] transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
+    class="hidden container overflow-hidden mx-auto px-4 py-4 lg:py-8 xl:px-10 transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
-    <!-- Snackbars -->
-    <div id="product-snackbar"
+    <div id="snackbar"
       class="snackbar fixed flex items-center justify-between max-w-full lg:text-xl sm:max-w-screen-sm -bottom-32 left-6 right-6 m-auto z-40 bg-white shadow-sm p-3 lg:p-6 pl-4 lg:pl-8 rounded-2xl overflow-hidden transition-all duration-500">
-      <div class="flex items-center gap-2 lg:gap-3">
-        <img src="./assets/images/tick.svg" alt="Tick">
-        <p class="">محصول با موفقیت اضافه شد</p>
-      </div>
-      <img src="./assets/images/close-1.svg" alt="close" id="close-product-snackbar" class="cursor-pointer transition-all hover:scale-110">
     </div>
 
-    <div id="cateogory-snackbar"
-    class="snackbar fixed flex items-center justify-between max-w-full lg:text-xl sm:max-w-screen-sm -bottom-32 left-6 right-6 m-auto z-40 bg-white shadow-sm p-3 lg:p-6 pl-4 lg:pl-8 rounded-2xl overflow-hidden transition-all duration-500">
-    <div class="flex items-center gap-2 lg:gap-3">
-      <img src="./assets/images/tick.svg" alt="Tick">
-      <p class="">دسته بندی با موفقیت اضافه شد</p>
-    </div>
-    <img src="./assets/images/close-1.svg" alt="close" id="close-cateogory-snackbar" class="cursor-pointer transition-all hover:scale-110">
-  </div>
 
     <div class="flex flex-col lg:flex-1">
 
       <!-- Add New Category Button -->
       <button id="toggle-add-category"
-        class="absolute top-0 left-0 z-30 transition-all duration-300 lg:hidden w-full mx-auto mb-4 py-2 px-4 bg-primary text-white font-bold text-center text-sm">افزودن
+        class="absolute bottom-6 right-6 left-6 w-fit z-30 transition-all duration-300 lg:hidden py-2 rounded-lg mx-auto px-4 bg-primary text-white font-bold text-center text-sm">افزودن
         دسته
         بندی
         جدید</button>
@@ -65,7 +51,7 @@
         <form action="#" class="form">
 
           <!-- Row 1 -->
-          <div class="flex gap-3 lg:gap-6 mb-2 lg:mb-4">
+          <div class="flex gap-3 lg:gap-6 mb-1 lg:mb-3">
 
             <!-- Category -->
             <div class="input-container relative">
@@ -79,7 +65,7 @@
               </select>
               <!-- Appearance -->
               <img src="./assets/images/arrow-down.svg" alt="arrow"
-                class="absolute w-5 lg:w-8 left-3 lg:left-4 bottom-3 lg:bottom-4">
+                class="absolute w-5 lg:w-7 left-3 lg:left-4 bottom-[11px] lg:bottom-4">
             </div>
 
             <!-- Quantity -->
@@ -89,12 +75,13 @@
                 <img src="./assets/images/task.svg" alt="category" class="label-image">
                 <p class="label-text">تعداد</p>
               </label>
-              <div class="flex flex-1 gap-2 lg:gap-4 items-center">
+              <div class="flex flex-1 gap-2 lg:gap-3 items-center">
                 <!-- Input -->
-                <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8" class="form-input">
+                <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8"
+                  class="form-input invalid:bg-black">
                 <!-- Units -->
-                <div class="flex flex-col items-start">
-                  <label class="unit-input-label -mb-1 lg:mb-0" id="label-of-unit-packet">بسته
+                <div class="flex flex-col items-start" id="units-wrapper">
+                  <label class="unit-input-label -mb-[7px] lg:mb-0" id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
                     <span class="h-3 lg:h-4 w-3 lg:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
@@ -140,6 +127,12 @@
             <img src="./assets/images/box-add.svg" alt="add">
             <p>افزودن به محصولات</p>
           </button>
+
+          <button type="submit" id="edit-existed-product" class="btn-primary hidden">
+            <img src="./assets/images/box-add.svg" alt="edit">
+            <p>ذخیره تغییرات</p>
+          </button>
+
         </form>
       </section>
 
@@ -185,20 +178,21 @@
       <!-- Title -->
       <h2 class="title">محصولات</h2>
 
-      <div class="flex w-full min-h-[41px] lg:min-h-[48px] items-center justify-between mb-4 rounded-3xl overflow-hidden bg-white px-3 lg:px-4 py-2">
+      <div
+        class="flex w-full min-h-[41px] items-center justify-between lg:min-h-[48px] mb-4 rounded-3xl overflow-hidden bg-white px-3 lg:px-4 py-0 lg:py-2">
         <div class="flex items-center gap-2 flex-1 text-xl font-bold outline-none h-full">
           <label for="search-input">
             <img src="./assets/images/search-normal.svg" alt="search" class="w-4 lg:w-6">
           </label>
           <input type="text"
-            class="outline-none border-none min-h-[25px] lg:min-h-[28px] lg:max-w-[80%] flex-1 placeholder:font-normal text-sm lg:text-xl truncate"
+            class="outline-none border-none min-h-[16px] lg:min-h-[32px] lg:max-w-[80%] flex-1 placeholder:font-normal text-sm lg:text-lg truncate"
             id="search-input" name="search-input" placeholder="نام محصول مورد نظر را جستجو کنید">
         </div>
         <div
-          class="flex items-center gap-2 text-xl font-bold lg:min-w-[20%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
+          class="flex items-center gap-2 text-xl font-bold lg:min-w-[10%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
           <label for="sort-products"></label>
           <select name="sort-products" id="sort-products"
-            class="bg-white outline-none border-none flex-1 cursor-pointer text-base lg:text-xl">
+            class="bg-white outline-none border-none flex-1 cursor-pointer text-sm lg:text-lg">
             <option value="newest">جدیدترین</option>
             <option value="oldest">قدیمی ترین</option>
           </select>
@@ -209,8 +203,8 @@
       <table
         class="bg-primary-o15 rounded-24 overflow-hidden lg:rounded-40 text-2xl text-center flex flex-col table-fixed">
         <thead class="flex text-white">
-          <tr class="flex justify-evenly p-3 lg:p-6 bg-primary flex-1 even:bg-primary-o20">
-            <th class="opacity-0">
+          <tr class="flex justify-evenly p-3 lg:p-5 bg-primary flex-1 even:bg-primary-o20">
+            <th class="opacity-0 h-0">
               <img src="./assets/images/trash.svg" alt="trash">
             </th>
             <th class="table-header">
@@ -225,7 +219,7 @@
             <th class="table-header">
               <p>تاریخ</p>
             </th>
-            <th class="opacity-0">
+            <th class="opacity-0 h-0">
               <img src="./assets/images/trash.svg" alt="trash">
             </th>
           </tr>

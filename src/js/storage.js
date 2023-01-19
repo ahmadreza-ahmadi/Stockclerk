@@ -20,7 +20,7 @@ export default class Storage {
     const savedCategories = Storage.getAllCategories();
 
     // find existed categories
-    const existedItem = savedCategories.find(category => category.id === categoryToSave.id);
+    const existedItem = savedCategories.find(category => category.title === categoryToSave.title);
     if (existedItem) {
       // edit
       existedItem.title = categoryToSave.title;
@@ -59,7 +59,7 @@ export default class Storage {
     const savedProducts = Storage.getAllProducts();
 
     // find existed products
-    const existedItem = savedProducts.find(category => category.id === productToSave.id);
+    const existedItem = savedProducts.find(product => product.id == 1);
     if (existedItem) {
       // edit
       existedItem.title = productToSave.title;
@@ -67,6 +67,7 @@ export default class Storage {
       existedItem.quantity = productToSave.quantity;
       existedItem.unit = productToSave.checkedUnit;
       existedItem.seller = productToSave.seller;
+      localStorage.setItem("products", JSON.stringify(existedItem));
     } else {
       // new
       productToSave.id = new Date().getTime();

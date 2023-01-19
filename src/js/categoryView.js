@@ -27,7 +27,11 @@ class CategoryView {
     const title = categoryTitle.value;
 
     // don't continue when input is empty
-    if (!title) return;
+
+    if (!title) {
+      this.showSnackbar("invalidCategory");
+      return;
+    };
 
     Storage.saveCategory(
       { title }
@@ -46,7 +50,7 @@ class CategoryView {
     this.closeAddCategorySection(event);
 
     // show snackbar
-    this.showSnackbar();
+    this.showSnackbar("validCategory");
   }
 
   setApp() {
@@ -74,9 +78,8 @@ class CategoryView {
     if ($(window).width() < 1024) {
       event.preventDefault();
       addCategorySection.classList.remove("opacity-0");
-      addCategorySection.classList.add("h-[196px]")
+      addCategorySection.classList.add("h-[196px]");
       toggleAddCategoryBtn.classList.add("-translate-y-full");
-      container.classList.remove("pt-[52px]");  
     }
   }
 
@@ -85,22 +88,60 @@ class CategoryView {
       event.preventDefault();
       categoryTitle.value = "";
       addCategorySection.classList.add("opacity-0");
-      addCategorySection.classList.remove("h-[196px]")
-      addCategorySection.classList.add("h-0")
+      addCategorySection.classList.remove("h-[196px]");
+      addCategorySection.classList.add("h-0");
       toggleAddCategoryBtn.classList.remove("-translate-y-full");
-      container.classList.add("pt-[52px]");  
     }
   }
 
-  showSnackbar() {
-    const snackbar = document.querySelector("#cateogory-snackbar");
+  showSnackbar(style) {
+
+    let result = "";
+
+    if (style === "validCategory") {
+      result = `
+      <div class="flex items-center gap-2 lg:gap-3">
+      <img src="./assets/images/tick.svg" alt="Tick">
+          <p class="">دسته بندی با موفقیت اضافه شد</p>
+        </div>
+        <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
+          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          `;
+    } else if (style === "invalidCategory") {
+      result = `
+      <div class="flex items-center gap-2 lg:gap-3">
+          <img src="./assets/images/close-square.svg" alt="Close">
+          <p class="">نام دسته بندی را بنویسید</p>
+          </div>
+          <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
+          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+      `;
+    }
+
+    const snackbar = document.querySelector("#snackbar");
+    snackbar.innerHTML = result;
+
     snackbar.classList.add("show");
+
+    function emptySnackbar() {
+      result = "";
+      snackbar.innerHTML = result;
+    }
+
+    let isCloseButtonClicked = false;
+    document.querySelector("#close-snackbar").addEventListener("click", () => {
+      isCloseButtonClicked = true;
+      snackbar.classList.remove("show");
+      emptySnackbar;
+    });
+
+    if (isCloseButtonClicked = false) return;
+
     setTimeout(() => {
       snackbar.classList.remove("show");
+
+      emptySnackbar;
     }, 3000);
-    document.querySelector("#close-cateogory-snackbar").addEventListener("click", () => {
-      snackbar.classList.remove("show");
-    });
   }
 }
 

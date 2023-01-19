@@ -79,7 +79,7 @@ class CategoryView {
       event.preventDefault();
       addCategorySection.classList.remove("opacity-0");
       addCategorySection.classList.add("h-[196px]");
-      toggleAddCategoryBtn.classList.add("-translate-y-full");
+      toggleAddCategoryBtn.classList.add("translate-x-1300");
     }
   }
 
@@ -90,7 +90,7 @@ class CategoryView {
       addCategorySection.classList.add("opacity-0");
       addCategorySection.classList.remove("h-[196px]");
       addCategorySection.classList.add("h-0");
-      toggleAddCategoryBtn.classList.remove("-translate-y-full");
+      toggleAddCategoryBtn.classList.remove("translate-x-1300");
     }
   }
 

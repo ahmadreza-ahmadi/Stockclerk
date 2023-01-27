@@ -27,7 +27,7 @@
 
   <!-- Container -->
   <div id="container"
-    class="hidden container overflow-hidden mx-auto px-4 py-4 lg:py-8 xl:px-10 transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
+    class="hidden container overflow-hidden lg:overflow-auto mx-auto px-4 py-4 lg:py-8 xl:px-10 transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
     <div id="snackbar"
       class="snackbar fixed flex items-center justify-between max-w-full lg:text-xl sm:max-w-screen-sm -bottom-32 left-6 right-6 m-auto z-40 bg-white shadow-sm p-3 lg:p-6 pl-4 lg:pl-8 rounded-2xl overflow-hidden transition-all duration-500">
@@ -50,9 +50,8 @@
         <!-- Form -->
         <form action="#" class="form">
 
-          <!-- Row 1 -->
-          <div class="flex gap-3 lg:gap-6 mb-1 lg:mb-3">
-
+          <!-- Inputs -->
+          <div class="grid grid-rows-2 grid-cols-2 gap-x-4 lg:gap-x-6 gap-y-2 lg:gap-y-4 mb-4 lg:mb-6">
             <!-- Category -->
             <div class="input-container relative">
               <!-- Label -->
@@ -65,7 +64,7 @@
               </select>
               <!-- Appearance -->
               <img src="./assets/images/arrow-down.svg" alt="arrow"
-                class="absolute w-5 lg:w-7 left-3 lg:left-4 bottom-[11px] lg:bottom-4">
+                class="absolute w-5 lg:w-7 left-3 lg:left-[14px] bottom-[11px] lg:bottom-[14px]">
             </div>
 
             <!-- Quantity -->
@@ -81,7 +80,7 @@
                   class="form-input invalid:bg-black">
                 <!-- Units -->
                 <div class="flex flex-col items-start" id="units-wrapper">
-                  <label class="unit-input-label -mb-[7px] lg:mb-0" id="label-of-unit-packet">بسته
+                  <label class="unit-input-label -mb-[7px] lg:-mb-[2px]" id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
                     <span class="h-3 lg:h-4 w-3 lg:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
@@ -94,10 +93,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="flex gap-3 lg:gap-6 mb-4 lg:mb-6">
 
             <!-- Product Name -->
             <div class="input-container">
@@ -123,12 +118,12 @@
           </div>
 
           <!-- Button -->
-          <button type="submit" id="add-new-product" class="btn-primary">
+          <button type="submit" id="add-new-product" class="btn-primary col-span-2">
             <img src="./assets/images/box-add.svg" alt="add">
             <p>افزودن به محصولات</p>
           </button>
 
-          <button type="submit" id="edit-existed-product" class="btn-primary hidden">
+          <button type="submit" id="edit-existed-product" class="btn-primary col-span-2 hidden">
             <img src="./assets/images/box-add.svg" alt="edit">
             <p>ذخیره تغییرات</p>
           </button>

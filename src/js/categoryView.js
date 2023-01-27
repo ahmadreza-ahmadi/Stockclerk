@@ -105,7 +105,7 @@ class CategoryView {
           <p class="">دسته بندی با موفقیت اضافه شد</p>
         </div>
         <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
-          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          class="w-4 cursor-pointer transition-all hover:scale-110">
           `;
     } else if (style === "invalidCategory") {
       result = `
@@ -114,7 +114,7 @@ class CategoryView {
           <p class="">نام دسته بندی را بنویسید</p>
           </div>
           <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
-          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          class="w-4 cursor-pointer transition-all hover:scale-110">
       `;
     }
 

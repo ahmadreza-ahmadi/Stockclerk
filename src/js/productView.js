@@ -180,7 +180,7 @@ class ProductView {
           <p class="">محصول با موفقیت اضافه شد</p>
         </div>
         <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
-          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          class="w-4 cursor-pointer transition-all hover:scale-110">
           `;
     } else if (style === "editedProduct") {
       result = `
@@ -189,7 +189,7 @@ class ProductView {
       <p class="">تغییرات با موفقیت ذخیره شد</p>
         </div>
         <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
-          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          class="w-4 cursor-pointer transition-all hover:scale-110">
           `;
     } else if (style === "invalidProduct") {
       result = `
@@ -198,7 +198,7 @@ class ProductView {
           <p class="">همه فیلد های اجباری را پر کنید</p>
           </div>
           <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
-          class="w-4 lg:w-6 cursor-pointer transition-all hover:scale-110">
+          class="w-4 cursor-pointer transition-all hover:scale-110">
       `;
     }
 

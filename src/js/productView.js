@@ -53,7 +53,6 @@ class ProductView {
     this.createProductsList(this.products);
 
     if (event.target.id === "add-new-product" || event.target.parentElement.id === "add-new-product") this.showSnackbar("validProduct");
-    else this.showSnackbar("editedProduct");
 
     productTitle.value = "";
     productQuantity.value = "";
@@ -165,6 +164,8 @@ class ProductView {
       // reset classes to past
       addNewProductBtn.classList.remove("hidden");
       editExistedProductBtn.classList.add("hidden");
+
+      this.showSnackbar("editedProduct");
     });
   }
 

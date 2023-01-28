@@ -79,6 +79,8 @@ class CategoryView {
       event.preventDefault();
       addCategorySection.classList.remove("opacity-0");
       addCategorySection.classList.add("h-[196px]");
+      addCategorySection.classList.add("mb-4");
+      addCategorySection.classList.add("lg:mb-6");
       toggleAddCategoryBtn.classList.add("translate-x-1300");
     }
   }
@@ -90,6 +92,8 @@ class CategoryView {
       addCategorySection.classList.add("opacity-0");
       addCategorySection.classList.remove("h-[196px]");
       addCategorySection.classList.add("h-0");
+      addCategorySection.classList.remove("mb-4");
+      addCategorySection.classList.remove("lg:mb-6");
       toggleAddCategoryBtn.classList.remove("translate-x-1300");
     }
   }

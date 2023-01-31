@@ -41,6 +41,11 @@ class ProductView {
     const selectedCategory = productSelectedCategory.value;
     const seller = productSeller.value;
 
+    if (quantity == 0) {
+      this.showSnackbar("zeroQuantity");
+      return;
+    }
+
     if (!title || !quantity || !selectedCategory) {
       this.showSnackbar("invalidProduct");
       return;
@@ -156,8 +161,16 @@ class ProductView {
 
     editExistedProductBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      Storage.deleteProduct(productId);
+
+      // when quantity is zero, return
+      const quantity = productQuantity.value;
+      if (quantity == 0) {
+        this.showSnackbar("zeroQuantity");
+        return;
+      }
+
       this.addNewProduct(event);
+      Storage.deleteProduct(productId);
       this.products = Storage.getAllProducts();
       this.createProductsList(this.products);
 
@@ -196,6 +209,15 @@ class ProductView {
       <div class="flex items-center gap-2 lg:gap-3">
           <img src="./assets/images/close-square.svg" alt="Close">
           <p class="">همه فیلد های اجباری را پر کنید</p>
+          </div>
+          <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
+          class="w-4 cursor-pointer transition-all hover:scale-110">
+      `;
+    } else if (style === "zeroQuantity") {
+      result = `
+      <div class="flex items-center gap-2 lg:gap-3">
+          <img src="./assets/images/close-square.svg" alt="Close">
+          <p class="">مقدار نمی تواند برابر صفر باشد</p>
           </div>
           <img src="./assets/images/close-1.svg" alt="close" id="close-snackbar"
           class="w-4 cursor-pointer transition-all hover:scale-110">

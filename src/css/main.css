@@ -41,7 +41,7 @@
   }
 
   .label-image {
-    @apply w-4 h-4 lg:w-6 lg:h-6;
+    @apply fill-primary w-4 h-4 lg:w-6 lg:h-6;
   }
 
   .table-header {

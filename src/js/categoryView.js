@@ -78,7 +78,7 @@ class CategoryView {
     if ($(window).width() < 1024) {
       event.preventDefault();
       addCategorySection.classList.remove("opacity-0");
-      addCategorySection.classList.add("h-[196px]");
+      addCategorySection.classList.add("h-[184px]");
       addCategorySection.classList.add("mb-4");
       addCategorySection.classList.add("lg:mb-6");
       toggleAddCategoryBtn.classList.add("translate-x-1300");
@@ -90,7 +90,7 @@ class CategoryView {
       event.preventDefault();
       categoryTitle.value = "";
       addCategorySection.classList.add("opacity-0");
-      addCategorySection.classList.remove("h-[196px]");
+      addCategorySection.classList.remove("h-[184px]");
       addCategorySection.classList.add("h-0");
       addCategorySection.classList.remove("mb-4");
       addCategorySection.classList.remove("lg:mb-6");

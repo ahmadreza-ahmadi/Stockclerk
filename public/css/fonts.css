@@ -1,13 +1,15 @@
 @font-face {
-  font-family: "yekan bakh";
-  src: url("../assets/fonts/yekan-bakh-regular.ttf");
+  font-family: Yekan Bakh FaNum;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
+  src: url('fonts/woff/YekanBakhFaNum-Regular.woff') format('woff'),
+    url('fonts/woff2/YekanBakhFaNum-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "yekan bakh";
-  src: url("../assets/fonts/yekan-bakh-bold.ttf");
+  font-family: Yekan Bakh FaNum;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
+  src: url('fonts/woff/YekanBakhFaNum-Bold.woff') format('woff'),
+    url('fonts/woff2/YekanBakhFaNum-Bold.woff2') format('woff2');
 }

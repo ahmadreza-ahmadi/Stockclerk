@@ -868,11 +868,11 @@ video {
 .w-3 {
   width: 0.75rem;
 }
-.w-7 {
-  width: 1.75rem;
-}
 .w-4 {
   width: 1rem;
+}
+.w-7 {
+  width: 1.75rem;
 }
 .max-w-full {
   max-width: 100%;

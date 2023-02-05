@@ -12,7 +12,7 @@
   <title>Inventory</title>
 </head>
 
-<body style="font-family: yekan bakh fanum;" class="w-full overflow-y-auto overflow-x-hidden bg-stone-100 font-yekan-bakh h-full">
+<body class="w-full overflow-y-auto overflow-x-hidden bg-stone-100 font-yekan-bakh h-full">
 
   <!-- Loading -->
   <div id="loading" class="absolute w-full h-full bg-white z-50">
@@ -30,12 +30,12 @@
     class="hidden container overflow-hidden lg:overflow-auto mx-auto px-4 py-4 lg:py-8 xl:px-10 transition-all duration-300 flex-col lg:flex-row gap-0 lg:gap-8 select-none">
 
     <div id="snackbar"
-      class="snackbar fixed flex items-center justify-between max-w-full lg:text-xl sm:max-w-screen-sm -bottom-32 left-6 right-6 m-auto z-40 bg-white shadow-sm p-3 lg:p-6 pl-4 lg:pl-8 rounded-2xl overflow-hidden transition-all duration-500">
+      class="snackbar fixed flex items-center justify-between max-w-full text-sm lg:text-lg sm:max-w-screen-sm -bottom-32 left-6 right-6 m-auto z-40 bg-white shadow-sm p-3 lg:p-6 pl-4 lg:pl-8 rounded-2xl overflow-hidden transition-all duration-500">
     </div>
 
     <!-- Add New Category Button -->
     <button id="toggle-add-category"
-      class="absolute bottom-6 right-6 left-6 w-fit z-30 transition-all duration-300 lg:hidden py-2 translate-x-0 rounded-lg mx-auto px-4 bg-primary text-white font-bold text-center text-sm">افزودن
+      class="absolute bottom-6 right-6 left-6 w-fit z-30 transition-all duration-300 lg:hidden py-2 translate-x-0 rounded-lg mx-auto px-4 bg-primary text-white font-bold text-center text-xs">افزودن
       دسته
       بندی
       جدید</button>
@@ -104,10 +104,10 @@
               <div class="flex flex-1 gap-2 lg:gap-3 items-center">
                 <!-- Input -->
                 <input fo type="number" name="quantity" id="product-quantity" placeholder="مثال: 8"
-                  class="form-input invalid:bg-black">
+                  class="form-input h-full invalid:bg-black">
                 <!-- Units -->
                 <div class="flex flex-col items-start" id="units-wrapper">
-                  <label class="unit-input-label -mb-[7px] lg:-mb-[2px]" id="label-of-unit-packet">بسته
+                  <label class="unit-input-label -mb-[0px] lg:-mb-[2px]" id="label-of-unit-packet">بسته
                     <input checked type="radio" name="unit" class="absolute right-0 opacity-0 cursor-pointer w-0 h-0"
                       id="radio-of-unit-packet">
                     <span class="h-3 lg:h-4 w-3 lg:w-4 bg-white rounded-[50%] relative" id="checkmark-packet"></span>
@@ -243,7 +243,7 @@
 
       <div
         class="flex w-full min-h-[41px] items-center justify-between lg:min-h-[48px] mb-4 rounded-3xl overflow-hidden bg-white px-3 lg:px-4 py-0 lg:py-2">
-        <div class="flex items-center gap-2 flex-1 text-xl font-bold outline-none h-full">
+        <div class="flex items-center gap-2 flex-1 font-bold outline-none h-full">
           <label for="search-input">
             <svg class="fill-primary w-4 lg:w-6" width="24" height="24" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
@@ -254,14 +254,14 @@
             </svg>
           </label>
           <input type="text"
-            class="outline-none border-none min-h-[16px] lg:min-h-[32px] lg:max-w-[80%] flex-1 placeholder:font-normal text-sm lg:text-lg truncate"
+            class="outline-none border-none min-h-[16px] lg:min-h-[32px] lg:max-w-[80%] flex-1 placeholder:font-normal text-xs lg:text-base truncate"
             id="search-input" name="search-input" placeholder="نام محصول مورد نظر را جستجو کنید">
         </div>
         <div
-          class="flex items-center gap-2 text-xl font-bold lg:min-w-[10%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
+          class="flex items-center gap-2 font-bold lg:min-w-[10%] cursor-pointer border-r-2 border-r-primary-o20 border-solid">
           <label for="sort-products"></label>
           <select name="sort-products" id="sort-products"
-            class="bg-white outline-none border-none flex-1 cursor-pointer text-sm lg:text-lg">
+            class="bg-white outline-none border-none flex-1 cursor-pointer text-xs lg:text-base">
             <option value="newest">جدیدترین</option>
             <option value="oldest">قدیمی ترین</option>
           </select>
@@ -270,7 +270,7 @@
 
       <!-- Table -->
       <table
-        class="bg-primary-o15 rounded-24 overflow-hidden lg:rounded-40 text-2xl text-center flex flex-col table-fixed">
+        class="bg-primary-o15 rounded-24 overflow-hidden lg:rounded-40 text-xs text-center flex flex-col table-fixed">
         <thead class="flex text-white">
           <tr class="flex justify-evenly p-3 lg:p-5 bg-primary flex-1 even:bg-primary-o20">
             <th class="w-4 lg:w-6 opacity-0 h-0"></th>

@@ -92,7 +92,7 @@ class ProductView {
         <p class="truncate">${selectedCategory.title}</p>
       </td>
       <td class="table-body">
-        <p class="truncate">${item.quantity} <span class="text-sm lg:text-xl">${item.checkedUnit}</span></p>
+        <p class="truncate">${item.quantity} <span class="text-xs lg:text-base">${item.checkedUnit}</span></p>
       </td>
       <td class="table-body">
         <p class="truncate">${new Date(item.createdAt).toLocaleDateString(("fa-IR"))}</p>
@@ -111,7 +111,7 @@ class ProductView {
       `;
     });
 
-    if (this.products.length < 1) result = `<div class="text-sm lg:text-xl my-3 lg:my-6">درحال حاضر محصولی وجود ندارد</div>`;
+    if (this.products.length < 1) result = `<div class="text-xs lg:text-lg my-3 lg:my-6">درحال حاضر محصولی وجود ندارد</div>`;
 
     const productsDOM = document.querySelector("#products-list");
     productsDOM.innerHTML = result;
@@ -259,11 +259,14 @@ class ProductView {
       snackbar.innerHTML = result;
     }
 
+    let isCloseButtonClicked = false;
     document.querySelector("#close-snackbar").addEventListener("click", () => {
+      isCloseButtonClicked = true;
       snackbar.classList.remove("show");
-      emptySnackbar();
-      return;
+      emptySnackbar;
     });
+
+    if (isCloseButtonClicked = false) return;
 
     setTimeout(() => {
       snackbar.classList.remove("show");

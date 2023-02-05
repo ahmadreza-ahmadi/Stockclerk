@@ -2,9 +2,6 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
-    fontFamily: {
-      'yekan-bakh': 'yekan bakh',
-    },
     extend: {
       colors: {
         'primary': '#4790E7',

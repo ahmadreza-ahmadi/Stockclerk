@@ -840,6 +840,9 @@ video {
 .h-\[184px\] {
   height: 184px;
 }
+.h-4 {
+  height: 1rem;
+}
 .min-h-\[41px\] {
   min-height: 41px;
 }
@@ -1236,9 +1239,9 @@ tbody::-webkit-scrollbar-thumb:hover {
     left: 14px;
   }
 
-  .lg\:my-6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+  .lg\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .lg\:mb-6 {
@@ -1267,6 +1270,10 @@ tbody::-webkit-scrollbar-thumb:hover {
 
   .lg\:h-9 {
     height: 2.25rem;
+  }
+
+  .lg\:h-6 {
+    height: 1.5rem;
   }
 
   .lg\:min-h-\[48px\] {

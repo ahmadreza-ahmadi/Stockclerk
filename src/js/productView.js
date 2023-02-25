@@ -77,7 +77,7 @@ class ProductView {
       const selectedCategory = Storage.getAllCategories().find(c => c.id == item.selectedCategory);
 
       result += `
-      <tr class="flex items-center p-3 lg:p-5 flex-1 even:bg-primary-o20 product-list">
+      <tr class="flex items-center p-3 lg:p-5 flex-1 even:bg-primary-o20 product-list snap-start">
       <td data-id="${item.id}" class="cursor-pointer edit-product">
         <svg class="pointer-events-none fill-primary w-4 h-4 lg:w-6 lg:h-6" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H11C11.41 1.25 11.75 1.59 11.75 2C11.75 2.41 11.41 2.75 11 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V13C21.25 12.59 21.59 12.25 22 12.25C22.41 12.25 22.75 12.59 22.75 13V15C22.75 20.43 20.43 22.75 15 22.75Z"/>

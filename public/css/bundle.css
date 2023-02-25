@@ -905,6 +905,12 @@ video {
 .resize {
   resize: both;
 }
+.snap-y {
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+.snap-start {
+  scroll-snap-align: start;
+}
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1190,18 +1196,11 @@ input[type=number] {
   }
 }
 tbody::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  z-index: 1000;
-}
-tbody::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  background: #f7f4ed;
+  width: 3px;
 }
 tbody::-webkit-scrollbar-thumb {
   background: #2196F3;
   border-radius: 100vh;
-  border: 3px solid #f6f7ed;
 }
 tbody::-webkit-scrollbar-thumb:hover {
   background: rgb(33, 150, 243, 0.8);
@@ -1217,10 +1216,6 @@ tbody::-webkit-scrollbar-thumb:hover {
 }
 .even\:bg-primary-o20:nth-child(even) {
   background-color: rgba(71, 144, 231, 0.2);
-}
-.invalid\:bg-black:invalid {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;

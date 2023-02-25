@@ -93,20 +93,12 @@ input[type=number] {
 }
 
 tbody::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  z-index: 1000;
-}
-
-tbody::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  background: #f7f4ed;
+  width: 3px;
 }
 
 tbody::-webkit-scrollbar-thumb {
   background: #2196F3;
   border-radius: 100vh;
-  border: 3px solid #f6f7ed;
 }
 
 tbody::-webkit-scrollbar-thumb:hover {
